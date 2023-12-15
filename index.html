@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRC Component</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "htm": "https://esm.sh/htm",
+                "react": "https://esm.sh/react",
+                "react-dom": "https://esm.sh/react-dom",
+                "react-bootstrap": "https://esm.sh/react-bootstrap"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module">
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import { BRC } from './BRC.js'; // Assuming BRC.js is in the same directory
+        import htm from "htm";
+
+        const html = htm.bind(React.createElement);
+
+        ReactDOM.render(
+            html`<${BRC}
+                brcRadioButton=${"mint"}
+                tokenTicker=${"MEME"}
+                tokenSupply=${10000}
+                mintAmount=${10}
+                mintLimit=${100}
+            />`,
+            document.getElementById('root')
+        );
+    </script>
+</body>
+</html>
