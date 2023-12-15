@@ -10,10 +10,21 @@
                 "htm": "https://esm.sh/htm",
                 "react": "https://esm.sh/react",
                 "react-dom": "https://esm.sh/react-dom",
-                "react-bootstrap": "https://esm.sh/react-bootstrap"
+                "@gear-js/api": "https://esm.sh/@gear-js/api",
+                "@polkadot/types": "https://esm.sh/@polkadot/types",
+                "@polkadot/util": "https://esm.sh/@polkadot/util",
+                "@polkadot/util-crypto": "https://esm.sh/@polkadot/util-crypto",
+                "@polkadot/extension-dapp": "https://esm.sh/@polkadot/extension-dapp",
+                "@polkadot/ui-keyring": "https://esm.sh/@polkadot/ui-keyring",
+                "@polkadot/api": "https://esm.sh/@polkadot/api"
             }
         }
     </script>
+    <script type="module">
+        import eruda from "eruda";
+        eruda.init();
+    </script>
+    <script type="module" src="script.js"></script>
 </head>
 <body>
     <div id="root"></div>
